@@ -13,6 +13,8 @@ public class phoneNumFormat {
 		System.out.print("Enter the unformatted phone number (10-digit) : ");
 		String numInput = in.next();
 		System.out.printf("Formatted number : %s", processedNum(numInput));
+		
+		in.close();
 	}
 
 	/**

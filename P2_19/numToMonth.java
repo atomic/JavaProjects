@@ -23,7 +23,7 @@ public class numToMonth {
 			month = in.nextInt();
 		}
 		System.out.printf("That month is %s", monthList[month - 1]);
-		
+		in.close();
 	}
 
 }
