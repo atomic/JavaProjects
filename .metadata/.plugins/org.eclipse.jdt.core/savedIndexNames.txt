@@ -1,0 +1,4 @@
+INDEX VERSION 1.127+/home/carvantes/Documents/Java/.metadata/.plugins/org.eclipse.jdt.core
+273265995.index
+2725099314.index
+4180283518.index
