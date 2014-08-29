@@ -1,0 +1,16 @@
+-----------------------------------------------------------------------------------------------
+These are hybrid cars from : http://www.hybridcars.com/hybrid-sedan?sort=ASC&order=msrp
+
+2010 Chevrolet Aveo     29 MPG		$12,000	
+2011 Kia Rio			29 MPG		$12,300
+2011 Toyota Yaris		29 MPG		$13,000
+-----------------------------------------------------------------------------------------------
+Non-hybrid cars: from "http://www.autoguide.com/auto-news/2013/05/top-10-cheapest-non-hybrid-cars-that-get-40-mpg-highway.html/"
+
+Honda Civic HF 			39 mpg  	$20,555
+Chevrolet Cruze Eco 	42 mpg		$20,490
+Dodge Dart Aero			36 mpg		$20,190
+-----------------------------------------------------------------------------------------------
+Estimated miles : 15,000 miles
+Estimated gas price : $3 to $4 in US 	(http://www.gasbuddy.com/gb_gastemperaturemap.aspx)
+-----------------------------------------------------------------------------------------------
