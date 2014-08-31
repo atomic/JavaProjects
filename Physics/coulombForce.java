@@ -19,6 +19,7 @@ public class coulombForce {
 		double r = in.nextDouble();
 		System.out.printf("F_e = %.2f", coulombF(q1, q2, r)); 
 		//something is not right, result does not agree with the example 23.2 in physics books
+		in.close();
 	}
 
 }
