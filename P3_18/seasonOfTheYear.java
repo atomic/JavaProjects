@@ -8,6 +8,13 @@ import java.util.Scanner;
  */
 
 
+/**
+ * Method:
+ * First, ask user for input of month. (i make it optional to use number or string)  
+ * Then, find the general category of season based only on the month of the year.
+ * Using switch statement, this process can be simplified as shown below.
+ * Then, change the season of the month based on the requirement described in the book.
+ */
 public class seasonOfTheYear {
 
 	public static void main(String[] args) {
@@ -75,3 +82,43 @@ public class seasonOfTheYear {
 		in.close();
 	}
 }
+/** Test cases
+
+Enter the month : 1
+Enter day : 10
+The season is Winter.
+
+Enter the month : 3
+Enter day : 20
+The season is Winter.
+
+Enter the month : 3
+Enter day : 21
+The season is Spring.
+
+Enter the month : 6
+Enter day : 15
+The season is Spring.
+
+Enter the month : 6
+Enter day : 24
+The season is Summer.
+
+Enter the month : 9
+Enter day : 15
+The season is Summer.
+
+Enter the month : 9
+Enter day : 25
+The season is Fall.
+
+Enter the month : 12
+Enter day : 18
+The season is Fall.
+
+Enter the month : 12
+Enter day : 25
+The season is Winter.
+
+
+*/

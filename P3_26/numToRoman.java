@@ -6,16 +6,27 @@ import java.util.Scanner;
  * Description : The program will convert positive integer to roman number
  */
 
+/** Method
+ * To solve the problem, i apply the Recursion technique to smartly 
+ * chop down the digits of number sequentially.
+ * First, ask user for inputs in integer. 
+ * if its value is valid, proceed to next steps to find the roman numeral
+ */
 
 public class numToRoman {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int num = getValidInt();
+		if (num > 3999 || num < 1) {
+			System.out.print("Ivalid input, sir.\n");
+			System.exit(0);
+		}
 		String theRomanNumber = getRomanNumeral(num);
 		System.out.printf("The roman number is : %s", theRomanNumber);
 	}
 
+	// function asking for integer input
 	public static int getValidInt() {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Please input integer : ");
@@ -25,6 +36,14 @@ public class numToRoman {
 			return getValidInt();
 	}
 	
+	/**
+	 * The function works recursively by keeping track of the "Stack" of 
+	 * previous Strings. Visually, the process can be imagined as a growing a tree 
+	 * from root to branches, and chop it down from branches to root.
+	 * 
+	 * @param i
+	 * @return
+	 */
 	public static String getRomanNumeral(int i) {
 		if (i >= 900 && i < 1000)
 			return "CM"  + getRomanNumeral(i - 900);
@@ -58,6 +77,10 @@ public class numToRoman {
 }
 
 /* Test Cases
+
+Please input integer : 23012
+Ivalid input, sir.
+
 Please input integer : 1978
 The roman number is : MCMLXXVIII
 
