@@ -13,10 +13,14 @@ public class gameOfNim {
 	}
 
 	public static int generateSmartCOMNumber(int n) {
-		int randomPower = (int) (( Math.random() * 6 )+ 1);
-		if (Math.pow(2, randomPower) > n)
-			generateSmartCOMNumber(n);
-		return (int) (n - Math.pow(2, randomPower));
+		int randomPower = 0;
+		for (int i = 1; i < 7; i++) {
+			if (Math.pow(2, i) > n)
+				randomPower = i - 1;
+		}
+		System.out.printf("DEBUG : randomPower = %d \n", randomPower );
+		System.out.printf("DEBUG : SmartNumber = %d \n", (n - (int)Math.pow(2, randomPower)) - 1);
+		return (n - (int)Math.pow(2, randomPower)) + 1; //return pile - (n^2 -1)
 	}
 
 public static void playGame(int n, int comDIFF) {
