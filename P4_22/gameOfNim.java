@@ -8,11 +8,24 @@ import java.util.Scanner;
 
 public class gameOfNim {
 
+	public static int generateStupidComNumber(int n) {
+		return (int) Math.random()*(n/2) + 1;
+	}
+
+	public static int generateSmartCOMNumber(int n) {
+		int randomPower = (int) (( Math.random() * 6 )+ 1);
+		if (Math.pow(2, randomPower) >= n)
+			generateSmartCOMNumber(n);
+		return (int) (n - Math.pow(2, randomPower));
+	}
+
 public static void playGame(int n, int comDIFF) {
 		Scanner in = new Scanner(System.in);
 		int currentSize = n;
 		boolean playerLast = false;
 		boolean comLast = false;
+		int playerChosenNum = 0;
+		int comChosenNum = 0;
 		while(currentSize > 0) {
 			System.out.print("Player number : ");
 			playerChosenNum = in.nextInt();
@@ -27,7 +40,7 @@ public static void playGame(int n, int comDIFF) {
 				comChosenNum = generateSmartCOMNumber(n);
 				break;
 			}
-			pileSIZE -= comChosenNum;
+			currentSize -= comChosenNum;
 			playerLast = true;
 			comLast = false;
 		}
@@ -40,32 +53,22 @@ public static void main(String[] args) {
 	int playerChosenNum = 0; //declare
 	int comChosenNum = 0; //declare
 	int comDIFF = (int) (Math.random() + 1); // smart or stupid
-	if (whoStartFirst == 0) {
-		playerChosenNum(pileSIZE, comDIFF);
-	}
+
+	if (whoStartFirst == 0)
+		playGame(pileSIZE, comDIFF);
 	else {
 		System.out.print("COM Moves.");
 		switch (comDIFF) {
 		case 0:
-			comChosenNum = generateStupidComNumber(n);
+			comChosenNum = generateStupidComNumber(pileSIZE);
 			break;
 		case 1:
-			comChosenNum = generateSmartCOMNumber(n);
+			comChosenNum = generateSmartCOMNumber(pileSIZE);
 			break;
 		}
 		pileSIZE -= comChosenNum;
 		playGame(pileSIZE, comDIFF);
 	}
 
-	public static int generateStupidComNumber(int n) {
-		return (int) Math.random()*(n/2) + 1;
-	}
-
-	public static int generateSmartCOMNumber(int n) {
-		int randomPower = (int) (( Math.random() * 6 )+ 1);
-		if (Math.pow(2, randomPower) >= n)
-			generateSmartCOMNumber(n);
-		return (int) (n - Math.pow(2, randomPower));
-	}
 }
 }
