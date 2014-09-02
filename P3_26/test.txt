@@ -1,0 +1,35 @@
+Please input integer : 1978
+The roman number is : MCMLXXVIII
+
+Please input integer : 2021
+The roman number is : MMXXI
+
+Please input integer : 2020
+The roman number is : MMXX
+
+Please input integer : 2094
+The roman number is : MMXCIV
+
+Please input integer : 9
+The roman number is : IX
+
+Please input integer : 4
+The roman number is : IV
+
+Please input integer : 19
+The roman number is : XIX
+
+Please input integer : 29
+The roman number is : XXIX
+
+Please input integer : 49
+The roman number is : XLIX
+
+Please input integer : 94
+The roman number is : XCIV
+
+Please input integer : 4999
+The roman number is : MMMMCMXCIX
+
+Please input integer : 3999
+The roman number is : MMMCMXCIX
