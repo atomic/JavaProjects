@@ -23,6 +23,7 @@ class asteriskSquare {
 	    System.out.print(" ");
 	    printRepeatedString("*", input);
 	    System.out.println();
+
 	    //then, print the next n-2 solid and hollow square
 	    for (int i = 0; i < input - 2; i++) {
 		printRepeatedString("*", input);
@@ -30,6 +31,8 @@ class asteriskSquare {
 		printRepeatedString(" ", input - 2);
 		System.out.print("*\n");
 	    }
+	    
+	    //Lasty, this will print the last 2 block of asterisk
 	    printRepeatedString("*", input); 
 	    System.out.print(" ");
 	    printRepeatedString("*", input);
@@ -44,6 +47,11 @@ class asteriskSquare {
     }
     
 
+    /**
+     * The function is used to print a certain string certain times
+     * @param str : the string to be repeated
+     * @param n : the number of times the string will be repeated
+     */
     static void printRepeatedString(String str, int n) {
 	String toPrint = "";
 	for (int i = 0; i < n; i++)

@@ -3,15 +3,19 @@ import java.util.Scanner;
 /* Name : Tony lim
  * Date : Sep 3, 2014
  * Assignment : P4.32
- * Description : The program is used to check whether 8-digit card number is valid or not, using Luhn algorithm
+ * Description : The program is used to check whether 8-digit card number is valid or not
  */
 
 
+/** Methods
+ * 1) From the number inputted, first calculate the first sum of odd digits (firstSum)
+ * 2) From the even digits in the number, double the number and form a strings of all the collection all these doubled number
+ * 	then, sum all of the number in this digits of string
+ */
 public class creditCardCheck {
 
     public static void main(String[] args) {
 	Scanner in = new Scanner(System.in);
-//	System.out.printf("\n%d", Character.getNumericValue(input.charAt(0))); //DEBUG
 	
 	String option;
 	boolean done = false;

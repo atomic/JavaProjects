@@ -16,7 +16,7 @@ public class stdDev {
 	System.out.print(">>> ");
 	float tempValue;
 	float sum = 0;
-	float squareXSum = 0; // This variable is used to keep track of the first sum of the component inside stddev
+	float squareXSum = 0; // This is \Sigma{x_i^2}
 	int n = 0;
 	while (in.hasNextFloat()) {
 	    tempValue = in.nextFloat();
@@ -25,7 +25,7 @@ public class stdDev {
 	    n++; 
 	}
 	float average = sum/n;
-	double stdDev = Math.sqrt( (squareXSum - Math.pow(sum, 2)/n)/(n-1) );
+	double stdDev = Math.sqrt( (squareXSum - Math.pow(sum, 2)/n)/(n-1) ); //this is the full expression of stdDev
 	
 	System.out.printf("The number of value inputted is %d\n", n);
 	System.out.printf("The average is %.2f\n", average);
