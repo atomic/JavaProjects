@@ -23,10 +23,10 @@ public class salesAmount {
 	    
 	    // Automatic resources management in Java 7 (Read page 346)
 	    try (Scanner fin = new Scanner(fileName)) {
-		System.out.println("Open file succeed.");
+	    	System.out.println("Open file succeed.");
 	    }
 	}
-	
+
     }
 
 }
