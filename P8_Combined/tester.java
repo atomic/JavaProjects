@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import cs3b.p8.*; //import every class from this package
+
 /* Name : Tony Lim
  * Date : Sep 17, 2014
  * Assignment : P8.9, P8.11, P8.13, P8.27
@@ -11,8 +12,16 @@ import cs3b.p8.*; //import every class from this package
 public class tester {
 
     public static void main(String[] args) {
-	//test comboLock;
-	testComboLock();
+    	//test comboLock;
+    	//	testComboLock();
+    	testLetter();
+    }
+
+    public static void testLetter() {
+    	Letter testLetter = new Letter("Mary", "John");
+    	testLetter.addLine("I am sorry we must part.");
+    	testLetter.addLine("I wish you all the best.");
+    	System.out.print(testLetter.getText());
     }
 
     public static void testComboLock() {
@@ -98,4 +107,14 @@ Congratulations, Locker has been unlocked.
 Test Combo Lock completed . . .
 
 
+        ------------- Test Cases: for "Letter"
+
+Dear John:
+
+I am sorry we must part.
+I wish you all the best.
+
+Sincerely,
+
+Mary
 */
