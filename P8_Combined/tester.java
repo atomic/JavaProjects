@@ -14,8 +14,29 @@ public class tester {
     public static void main(String[] args) {
     	//test comboLock;
     	//	testComboLock();
-    	testLetter();
+//    	testLetter();
+    	testMoth();
     }
+
+    public static void testMoth() {
+    	System.out.print("Input your starting position(double) : ");
+    	Scanner in = new Scanner(System.in);
+    	double start = in.nextDouble();
+    	
+		Moth stupidMoth = new Moth(start);
+		String option;
+		boolean done = false;
+		do {
+			System.out.print("Set light position : ");
+			stupidMoth.moveToLight(in.nextDouble());
+			stupidMoth.getPosition();
+			System.out.print("are you done (y/n) : ");
+			option = in.next();
+			done = (option.equals("y") ? true : false);
+		} while (!done);
+		in.close();
+		System.out.print("Cosing Program...");
+	}
 
     public static void testLetter() {
     	Letter testLetter = new Letter("Mary", "John");
@@ -117,4 +138,37 @@ I wish you all the best.
 Sincerely,
 
 Mary
+
+        ------------- Test Cases: for "Moth"
+
+Input your starting position(double) : 15
+Set light position : 50
+Debug, x = 15.0
+Position is  : 32.5
+are you done (y/n) : n
+Set light position : 50
+Debug, x = 32.5
+Position is  : 41.25
+are you done (y/n) : n
+Set light position : 50
+Debug, x = 41.25
+Position is  : 45.625
+are you done (y/n) : n 
+Set light position : 50
+Debug, x = 45.625
+Position is  : 47.8125
+are you done (y/n) : n
+Set light position : 30
+Debug, x = 47.8125
+Position is  : 38.90625
+are you done (y/n) : n
+Set light position : 10
+Debug, x = 38.90625
+Position is  : 24.453125
+are you done (y/n) : n
+Set light position : 25
+Debug, x = 24.453125
+Position is  : 24.7265625
+are you done (y/n) : y
+
 */
