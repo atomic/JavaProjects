@@ -12,10 +12,9 @@ import cs3b.p8.*; //import every class from this package
 public class tester {
 
     public static void main(String[] args) {
-    	//test comboLock;
-    	//	testComboLock();
-//    	testLetter();
-    	testMoth();
+    	//	testComboLock(); //passed
+    	//  testLetter(); //passed
+    	// testMoth(); //passed
     }
 
     public static void testMoth() {
