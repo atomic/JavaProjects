@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 import cs3b.p8.*; //import every class from this package
 
 /* Name : Tony Lim
@@ -15,8 +14,19 @@ public class tester {
     	//	testComboLock(); //passed
     	//  testLetter(); //passed
     	// testMoth(); //passed
+	testResisor();
     }
 
+    public static void testResisor() {
+	Scanner in = new Scanner(System.in);
+	System.out.print("Input your resistor nominal resistance : ");
+	double nom_res = in.nextDouble();
+	System.out.print("Input the tolerance percentage (ex: 10) : ");
+	double tolerance_perc = in.nextDouble()/100;
+	Resistor resistorA = new Resistor(nom_res, tolerance_perc);
+	resistorA.display();
+	in.close();
+    }
     public static void testMoth() {
     	System.out.print("Input your starting position(double) : ");
     	Scanner in = new Scanner(System.in);
@@ -170,4 +180,43 @@ Debug, x = 24.453125
 Position is  : 24.7265625
 are you done (y/n) : y
 
+
+        ------------- Test Cases: for "P8.27 - Resistor Bands"
+
+Input your resistor nominal resistance : 2700000
+Input the tolerance percentage (ex: 10) : 5
+
+2700000.00 +- 5 % resitance.
+from 2565000.00 to 2835000.00.
+Actual : 2799083.97.
+Color bands [Red, Violet, Green, Gold]
+
+-----------------------------------------------------------------------
+Input your resistor nominal resistance : 330
+Input the tolerance percentage (ex: 10) : 10
+
+330.00 +- 10 % resitance.
+from 297.00 to 363.00.
+Actual : 325.46.
+Color bands [Orange, Orange, Brown, Silver]
+
+-----------------------------------------------------------------------
+Input your resistor nominal resistance : 33
+Input the tolerance percentage (ex: 10) : 0.25
+
+33.00 +- 0 % resitance.
+from 32.92 to 33.08.
+Actual : 33.04.
+Color bands [Orange, Orange, Black, Blue]
+
+-----------------------------------------------------------------------
+Input your resistor nominal resistance : 40000
+Input the tolerance percentage (ex: 10) : 0.05
+
+40000.00 +- 0 % resitance.
+from 39980.00 to 40020.00.
+Actual : 39992.07.
+Color bands [Yellow, None, Yellow, Gray]
+
+-----------------------------------------------------------------------
 */
