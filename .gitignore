@@ -2,6 +2,7 @@
 *.jar
 *.war
 *.ear
+*.gitignore
 
 # eclipse specific git ignore
 *.pydevproject
