@@ -32,7 +32,6 @@ public class Appointment {
 	}
 	
 	public String getDate(){
-//		return AppCalendar.toString();    // this gives ugly format
 		return format1.format(AppCalendar.getTime());
 	}
 	

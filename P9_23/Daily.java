@@ -1,5 +1,5 @@
+import java.text.DateFormatSymbols;
 import java.util.Calendar;
-import java.util.Date;
 
 
 public class Daily extends Appointment{
@@ -9,24 +9,39 @@ public class Daily extends Appointment{
 	private Calendar endingDate;
 	
 	/**
-	 * By default, Daily appointment occurs everyday
+	 * By default, Daily appointment occurs everyday for a year
 	 */
 	public Daily(String description){
 		super(description);
 		startingDate = Calendar.getInstance();
 		endingDate = Calendar.getInstance();
-		startingDate.set(0, 0, 0);
-		endingDate.set(9999, 12, 30);
+		endingDate.add(Calendar.YEAR, 1);
 	}
 	
+	/**
+	 * 
+	 * Constructor with starting date and ending date
+	 */
 	public Daily( String description,
 				int s_Year, int s_Month, int s_Day,
 				int e_Year, int e_Month, int e_Day) {
 		super(description);
-		startingDate = Calendar.getInstance();
-		endingDate = Calendar.getInstance();
 		startingDate.set(s_Year, s_Month, s_Day);
 		endingDate.set(e_Year, e_Month, e_Day);
+	}
+
+	/**
+	 * Constructor with only ending date
+	 */
+	public Daily( String description,
+				int e_Year, int e_Month, int e_Day) {
+		super(description);
+		endingDate.set(e_Year, e_Month, e_Day);
+	}
+	
+	@Override
+	public String getDate() {
+		return "Daily Appointment from " + format1.format(startingDate.getTime()) + " to " + format1.format(endingDate.getTime());
 	}
 	
 	public boolean occursOn(int year, int month, int day){

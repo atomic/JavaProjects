@@ -1,5 +1,5 @@
-import java.util.Calendar;
-import java.util.Date;
+import java.text.DateFormatSymbols;
+
 
 
 public class Monthly extends Appointment{
@@ -8,9 +8,16 @@ public class Monthly extends Appointment{
 	private int startMonth;
 	private int endMonth;
 	private int dayOfMonth; // use calender? or not?
-	public Monthly(){
-		super();
-		startMonth = endMonth = dayOfMonth = 0;
+	
+	/**
+	 * By default, make it occurs on first day of every month
+	 * @param newDescription
+	 */
+	public Monthly(String newDescription){
+		super(newDescription);
+		startMonth = 1;
+		endMonth = 12;
+		dayOfMonth = 1;
 	}
 
 	public Monthly(String newDescription, int startMonth, int endMonth, int dayOf) {
@@ -30,6 +37,13 @@ public class Monthly extends Appointment{
 	
 	public int getDayOf(){
 		return dayOfMonth;
+	}
+	
+	@Override
+	public String getDate() {
+		return "Monthly Appointment on day " + dayOfMonth + " from " + 
+				new DateFormatSymbols().getMonths()[startMonth - 1] + " to " +
+				new DateFormatSymbols().getMonths()[endMonth - 1];
 	}
 	
 	public boolean occursOn(int year, int month, int day){
