@@ -42,8 +42,8 @@ public class Monthly extends Appointment{
 	@Override
 	public String getDate() {
 		return "Monthly Appointment on day " + dayOfMonth + " from " + 
-				new DateFormatSymbols().getMonths()[startMonth - 1] + " to " +
-				new DateFormatSymbols().getMonths()[endMonth - 1];
+				new DateFormatSymbols().getMonths()[startMonth] + " to " +
+				new DateFormatSymbols().getMonths()[endMonth];
 	}
 	
 	public boolean occursOn(int year, int month, int day){

@@ -23,6 +23,8 @@ public class OneTime extends Appointment {
 	public boolean occursOn(int year, int month, int day){
 		Calendar Temp = Calendar.getInstance();
 		Temp.set(year,month,day);
+		// Debug 
+		System.out.println("compare oneTime occurson : = " + Temp.compareTo(AppCalendar));
 		return Temp.compareTo(AppCalendar) == 0; //occurs that day
 	}
 	

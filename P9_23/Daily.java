@@ -25,7 +25,7 @@ public class Daily extends Appointment{
 	public Daily( String description,
 				int s_Year, int s_Month, int s_Day,
 				int e_Year, int e_Month, int e_Day) {
-		super(description);
+		this(description);
 		startingDate.set(s_Year, s_Month, s_Day);
 		endingDate.set(e_Year, e_Month, e_Day);
 	}
@@ -36,6 +36,8 @@ public class Daily extends Appointment{
 	public Daily( String description,
 				int e_Year, int e_Month, int e_Day) {
 		super(description);
+		startingDate = Calendar.getInstance();
+		endingDate = Calendar.getInstance();
 		endingDate.set(e_Year, e_Month, e_Day);
 	}
 	

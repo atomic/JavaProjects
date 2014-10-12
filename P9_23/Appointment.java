@@ -23,7 +23,7 @@ public class Appointment {
 	}
 	
 	public Appointment(String newDescription, int year, int month, int day){
-		description = newDescription;
+		this(newDescription);
 		AppCalendar.set(year,month,day);
 	}
 	
@@ -51,7 +51,7 @@ public class Appointment {
 	 */
 	public boolean occursOn(int year, int month, int day){
 		Calendar Temp = Calendar.getInstance();
-		Temp.set(year,month - 1, day); // -1, month in the Calender from 0-11
+		Temp.set(year,month, day); 
 
 		return (AppCalendar.get(Calendar.ERA) == Temp.get(Calendar.ERA)
 	            && AppCalendar.get(Calendar.YEAR) == Temp.get(Calendar.YEAR) 
