@@ -44,6 +44,14 @@ public class Appointment {
 	}
 	
 	/**
+	 * Used to print useful information to text file
+	 * @return
+	 */
+	public String getOutput() {
+		return "app" + "_" + getDate() + "_" + description;
+	}
+	
+	/**
 	 * @param year    normal format
 	 * @param month   from 1 to 12
 	 * @param day	   normal format
@@ -58,6 +66,10 @@ public class Appointment {
 	            && AppCalendar.get(Calendar.DAY_OF_YEAR) == Temp.get(Calendar.DAY_OF_YEAR));
 
 //		return AppCalendar.compareTo(Temp) == 0; //doesnt work, they include the minutes
+	}
+	
+	public void parseString(String stringToParse) {
+		////TODO
 	}
 	
 }

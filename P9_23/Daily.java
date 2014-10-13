@@ -56,4 +56,16 @@ public class Daily extends Appointment{
 		return Temp.compareTo(startingDate) >= 0 && Temp.compareTo(endingDate) <= 0;
 	}
 	
+	/**
+	 * Used to print useful information to text file
+	 * @return
+	 */
+	@Override
+	public String getOutput() {
+		return "daily" + "_" + format1.format(startingDate.getTime()) + "_" + format1.format(endingDate.getTime());
+	}
+	
+	public void parseString(String stringToParse) {
+		////TODO
+	}
 }

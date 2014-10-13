@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -201,7 +205,16 @@ public class tester{
 	 * @param memo
 	 */
 	public static void saveToFile(ArrayList<Appointment> memo) {
-
+		try {
+			PrintWriter fout = new PrintWriter("apps_data.txt", "UTF-8");
+			for (Appointment appointment : memo) {
+				fout.println(appointment.getOutput());
+				System.out.println();
+			}
+			fout.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -210,8 +223,18 @@ public class tester{
 	 * @param memo
 	 */
 	public static void loadFromFile(ArrayList<Appointment> memo) {
+		memo.clear(); // clear
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("apps_data.txt"));
+			String line = null;
+			while ((line = br.readLine()) != null) {
+				
+			}
+			br.close();
+		} catch (Exception e) {
+			System.err.println("The file filename.txt does not exist.");
+		}
 		memo.clear();
-		
 	}
 }
 

@@ -52,4 +52,17 @@ public class Monthly extends Appointment{
 				&& day   == this.dayOfMonth;
 	}
 	
+	/**
+	 * Used to print useful information to text file
+	 * @return
+	 */
+	@Override
+	public String getOutput() {
+		return "monthly" + "_" + startMonth + ":" + endMonth + ":" + dayOfMonth + "_" + getDescription();
+	}
+
+	public void parseString(String stringToParse) {
+		////TODO
+	}
+	
 }

@@ -28,4 +28,16 @@ public class OneTime extends Appointment {
 		return Temp.compareTo(AppCalendar) - 1 == 0; //occurs that day
 	}
 	
+	/**
+	 * Used to print useful information to text file
+	 * @return
+	 */
+	@Override
+	public String getOutput() {
+		return "app" + "_" + super.getDate() + "_" + getDescription();
+	}
+	
+	public void parseString(String stringToParse) {
+		////TODO
+	}
 }
