@@ -23,7 +23,7 @@ public class rectangleComponents extends JComponent{
 	}
 
 	public void changeRectangle(int num) {
-		numberOfRectangle = num;
+		numberOfRectangle = (num > 0? num : 1);
 		repaint();
 	}
 

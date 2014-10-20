@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 
-public class rectangleFrame extends JFrame {
+public class gridFrame extends JFrame{
 
 	private static final int FRAME_WIDTH    = 700;
 	private static final int FRAME_HEIGHT   = 600;
@@ -17,24 +17,24 @@ public class rectangleFrame extends JFrame {
 	private static final int CANVAS_HEIGHT  = 500;
 	private static final int CANVAS_WIDTH   = 500;
 
-	private   JLabel                rectangleNumberLabel;
-	private   JTextField            rectangleNumberField;
+	private   JLabel                gridNumberLabel;
+	private   JTextField            gridNumberField;
 	private   JButton               buttonToDraw;
 
 	private   JPanel                panel;
-	private   rectangleComponents   myCanvas;
+	private   gridComponent   myCanvas;
 	
 	
-	public rectangleFrame() {
-		setTitle("Random Rectangles Generator");
+	public gridFrame() {
+		setTitle("Drawing Grid Rectangle");
 		setSize(FRAME_WIDTH,FRAME_HEIGHT);	
 		
 		// allocating data for components
-		rectangleNumberField = new JTextField(7); // with of 7 by default
-		rectangleNumberLabel = new JLabel("Number of Rectangle : ");
+		gridNumberField = new JTextField(7); // with of 7 by default
+		gridNumberLabel = new JLabel("Number of Rectangle : ");
 		
 		
-		myCanvas = new rectangleComponents(1);
+		myCanvas = new gridComponent(4); //4x4 grid by default
 		myCanvas.setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT));
 
 		createButton();
@@ -44,12 +44,7 @@ public class rectangleFrame extends JFrame {
 
 	class redrawListener implements ActionListener {
 		public void actionPerformed(ActionEvent event) {
-			try {
-				myCanvas.changeRectangle(Integer.parseInt(rectangleNumberField.getText()));
-			} catch (Exception e) {
-				System.out.println("No inputs, default is 1.");
-				myCanvas.changeRectangle(1);
-			}
+			myCanvas.changeGrid(Integer.parseInt(gridNumberField.getText()));
 		}
 	}
 
@@ -61,13 +56,12 @@ public class rectangleFrame extends JFrame {
 
 	private void createPanel() {
 		panel = new JPanel();
-		panel.add(rectangleNumberLabel);
-		panel.add(rectangleNumberField);
+		panel.add(gridNumberLabel);
+		panel.add(gridNumberField);
 		panel.add(buttonToDraw);
 		panel.add(myCanvas);
 
 
 		add(panel);
 	}
-	
 }
