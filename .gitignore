@@ -17,6 +17,7 @@ tmp/**/*
 *~.nib
 local.properties
 .loadpath
+eclimd.log
 
 # External tool builders
 .externalToolBuilders/
