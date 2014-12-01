@@ -28,3 +28,4 @@ eclimd.log
 
 # sublime workspace
 *.sublime_workspace
+/bin/
