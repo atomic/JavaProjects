@@ -1,24 +1,18 @@
-*target*
-*.jar
-*.war
-*.ear
-*.gitignore
-*.xmi
+#### joe made this: http://goel.io/joe
 
-# eclipse specific git ignore
+#####=== Eclipse ===#####
 *.pydevproject
-*.metadata
-*bin/**
-bin/**
-tmp/**
-tmp/**/*
+.metadata
+.gradle
+bin/
+tmp/
 *.tmp
 *.bak
 *.swp
 *~.nib
 local.properties
+.settings/
 .loadpath
-eclimd.log
 
 # External tool builders
 .externalToolBuilders/
@@ -26,6 +20,30 @@ eclimd.log
 # Locally stored "Eclipse launch configurations"
 *.launch
 
-# sublime workspace
-*.sublime_workspace
-/bin/
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# TeXlipse plugin
+.texlipse
+
+#####=== Java ===#####
+
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
